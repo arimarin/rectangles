@@ -5,8 +5,15 @@ struct Rectangle {
     height: u32,
 }
 
+// Method to return rectangle area
+impl Rectangle {
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
+}
+
 fn main() {
-    // new rectangle
+    // New rectangle
     let rect1 = Rectangle {
         width: 30,
         height: 50,
@@ -18,11 +25,6 @@ fn main() {
     // Print area
     println!(
         "The area of the rectangle is {} square pixels.",
-        area(&rect1)
+        rect1.area()
     );
-}
-
-// Function to return rectlange area
-fn area(rectlange: &Rectangle) -> u32 {
-    rectlange.width * rectlange.height
 }
